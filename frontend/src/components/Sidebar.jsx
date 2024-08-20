@@ -1,6 +1,7 @@
 import React from 'react'
 import Searchbox from './Searchbox'
 import Conversations from './Conversations'
+import Logout from './Logout'
 const Sidebar = () => {
   return (
     <div>
@@ -9,6 +10,7 @@ const Sidebar = () => {
          
         </div>
         <Conversations/>
+        <Logout />
     </div>
   )
 }

@@ -1,7 +1,9 @@
 import React from 'react'
+import Messages from './Messages'
 
-const Header = () => {
+const Header = ({username}) => {
     return (
+        
         <div className='w-[19rem] p-1 bg-blue-900 rounded-md'>
         <div className='flex gap-2 items-center rounded p-2 py-1 cursor-pointer'>
                 <div className=" avatar online">
@@ -11,13 +13,14 @@ const Header = () => {
                 </div>
                 <div className='flex'>
                     <div className='flex gap-3 justify-between'>
-                        <p className='font-bold text-gray-200'> John Doe </p>
+                        <p className='font-bold text-gray-200'> {username} </p>
                         <span className='text-xl'> </span>
                     </div>
                 </div>
 
 
             </div>
+            
         </div>
     )
 }
