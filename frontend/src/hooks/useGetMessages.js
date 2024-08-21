@@ -24,6 +24,7 @@ useEffect(()=>{
         }
     }
     if(selectedConversation?.id) getMessages();
+    
 },[selectedConversation.id, setMessages])
     return {messages, loading}
 }
