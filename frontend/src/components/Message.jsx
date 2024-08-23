@@ -23,8 +23,8 @@ const Message = ({ message }) => {
                     </div>
                 </div>
 
-                <div className={` chat-bubble ${fromMe ? "bg-sky-500" : ""} inline-block h-auto`}>
-                    <span> {message.message}</span>
+                <div className={` chat-bubble ${fromMe ? "bg-sky-500" : ""} `}>
+                    <span className='message'> {message.message}</span>
                 </div>
             {/* </div> */}
             <div className="chat-footer">

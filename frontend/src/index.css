@@ -35,6 +35,9 @@ body{
     background-size:cover;
     background-position: center;
 }
+.message{
+  overflow-wrap: anywhere;
+}
 
 @media (max-width: 768px){
   .app-container{

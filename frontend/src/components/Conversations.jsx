@@ -8,6 +8,17 @@ const Conversations = () => {
   const { loading, conversations } = useGetConversations();
   const { selectedConversation, setSelectedConversation } = useConversation();
 
+  const handleSubmit = (e)=>{
+    const messages = document.getElementById('messages')
+    const sidebar = document.getElementById('sidebar')
+    sidebar.style.display = 'none';
+    if(messages){
+      messages.style.display = 'block' ;
+      
+    }
+      
+  }
+
   useEffect(() =>{
 return () => {
     setSelectedConversation(null);
@@ -15,7 +26,7 @@ return () => {
   },[])
   return (
     <>
-      <div className='py-2 flex flex-col overflow-auto h-[28rem] scroll'>
+      <div className='py-2 flex flex-col overflow-auto h-[28rem] scroll' onClick={(e)=>handleSubmit(e)}>
         {conversations.map((conversation, idx) =>
           <Conversation key={conversation._id}
             username={conversation.fullName}
