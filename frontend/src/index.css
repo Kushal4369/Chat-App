@@ -35,3 +35,9 @@ body{
     background-size:cover;
     background-position: center;
 }
+
+@media (max-width: 768px){
+  .app-container{
+    width: 90%;
+  }
+}

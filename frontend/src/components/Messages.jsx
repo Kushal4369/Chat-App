@@ -22,16 +22,16 @@ useEffect(()=>{
   
 },[messages])
   return (
-    <div className='mx-3 my-3 w-[20rem] flex flex-col justify-between'>
-      <div className='w-full absolute z-[12]'>
+    <div className='mx-3 flex flex-col  w-full' id='messages'>
+      <div className='w-full  z-[12]'>
       <Header username={username} />
       </div>
 
-      <div className='w-[97%] relative top-16 h-[26rem] overflow-auto ' ref={lastMessageRef}>
+      <div className='w-[97%] relative top-5 h-[24rem] overflow-auto ' ref={lastMessageRef}>
       {!loading? messages.map((message, idx)=><Message message ={message} key={idx}/>) : [...Array(5).map(()=><MessageSkeleton />)]  }
       
       </div>
-      <div className='w-[20rem] absolute bottom-1 z-[12]'>
+      <div className='w-full relative top-5 z-[12]'>
       <SendButton />
       
       </div>

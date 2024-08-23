@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <div className= 'p-6 h-screen flex item justify-center'>
+      <div className= 'p-6 h-screen flex items-center justify-center w-2/5 mx-auto app-container'>
         <Routes>
           <Route path='/' element={authUser? <Home />: <Navigate to ="/login" />}  />
           <Route path='/login' element={authUser? <Navigate to ="/" / > :<Login />} />

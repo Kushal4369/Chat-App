@@ -8,26 +8,27 @@ const Message = ({ message }) => {
     const { authUser } = useAuthContext();
     const { selectedConversation } = useConversation();
     const fromMe = message.senderId === authUser._id;
-    
+
     const formattedTime = extractTime(message.createdAt)
     const chatClassName = fromMe ? 'chat-end' : 'chat-start';
     const profilePic = fromMe ? authUser.profilePic : selectedConversation?.profilePic;
 
 
     return (
-        <div className='flex items-end justify-around w-full'>
-            <div className="avatar online mb-5">
-                <div className='w-12 rounded-full'>
-                    <img src="https://avatar.iran.liara.run/public" alt='user avatar' />
+        // <div className='flex items-end  w-full'>
+            <div className={`chat mb-3 ${chatClassName} bg-inherit mx-2`}>
+                <div className="avatar online  chat-image">
+                    <div className='w-12 rounded-full'>
+                        <img src="https://avatar.iran.liara.run/public" alt='user avatar' />
+                    </div>
                 </div>
-            </div>
-            <div className={`chat mb-3 ${chatClassName} bg-inherit`}>
-                <div className={`chat-bubble ${fromMe ? "bg-sky-500" : ""}`}>
-                    {message.message}
+
+                <div className={` chat-bubble ${fromMe ? "bg-sky-500" : ""} inline-block h-auto`}>
+                    <span> {message.message}</span>
                 </div>
-            </div>
+            {/* </div> */}
             <div className="chat-footer">
-          
+
                 <time className="text-xs opacity-50">{formattedTime}</time>
             </div>
 
