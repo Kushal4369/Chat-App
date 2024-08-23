@@ -21,7 +21,7 @@ const SendButton = () => {
     <form className='rounded-lg h-10 w-[90%]' onSubmit={handleSubmit}>
       <input type="text" placeholder="Type here" className="input w-full h-10" id="message"  
       onChange={(e)=>setMessage(e.target.value)} value={message}/>
-      <button ><IoSend className='h-7 w-7 absolute top-2 right-10'></IoSend></button>
+      <button ><IoSend className='h-7 w-7 absolute top-2 right-[12%]'></IoSend></button>
     </form>
   )
 }
